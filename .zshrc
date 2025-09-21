@@ -8,7 +8,9 @@ export LANG=en_US.UTF-8
 # fi
 
 update() {
-  brew update && brew upgrade && brew cleanup
+  brew update && brew upgrade && brew autoremove && brew cleanup
+
+  brew bundle dump --global --force --file=$HOME/.Brewfile
 
   if [[ $1 == "-a" || $1 == "--all" ]]; then
     sudo softwareupdate -ia
