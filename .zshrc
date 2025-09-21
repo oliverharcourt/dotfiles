@@ -8,7 +8,7 @@
 update() {
   brew update && brew upgrade && brew autoremove && brew cleanup
 
-  brew bundle dump --global --force --file=$HOME/.Brewfile
+  brew bundle dump --force --file=$HOME/.Brewfile
 
   if [[ $1 == "-a" || $1 == "--all" ]]; then
     sudo softwareupdate -ia
