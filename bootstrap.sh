@@ -53,9 +53,9 @@ fi
 brew update
 
 # Install all our dependencies with bundle (See Brewfile)
-brew bundle --file ~/.Brewfile
+brew bundle --file=$HOME/.Brewfile
 
 # Create projects directory
 mkdir ~/projects
 
-source ./.macos
+source .macos
